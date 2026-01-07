@@ -6,7 +6,7 @@ try {
     if ($pdo) {
         echo "✅ Connected successfully to MySQL database!\n";
         
-        // Check if tables exist
+       
         $tables = $pdo->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
         echo "Found tables: " . implode(", ", $tables) . "\n";
         

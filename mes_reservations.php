@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 
 $user_id = $_SESSION['user']['id'];
 
-// Handle Deletion
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
     $reservation_id = $_POST['delete_id'];
     try {

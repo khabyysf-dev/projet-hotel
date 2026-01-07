@@ -14,7 +14,7 @@
 
   <?php include("includes/header.php"); ?>
 
-  <!-- Hero -->
+  
   <section class="hero hero-page" style="background-image: linear-gradient(135deg, rgba(2, 15, 31, 0.7) 0%, rgba(5, 30, 52, 0.6) 100%), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600');">
     <div class="hero-content">
       <h1>La saveur du luxe authentique</h1>
@@ -27,7 +27,7 @@
     </div>
   </section>
 
-  <!-- Menu Section -->
+  
   <section id="menu" class="pad-section">
     <div class="container">
       <div class="section-title reveal-on-scroll">
@@ -468,7 +468,7 @@
         </div>
       </div>
 
-      <!-- Bottom Page CTA -->
+      
       <div class="reveal-on-scroll" style="text-align: center; margin-top: 80px; padding-top: 60px; border-top: 2px solid rgba(212, 175, 55, 0.2);">
         <p class="muted" style="margin-bottom: 25px; font-size: 1.1rem;">Envie de vivre cette expérience ?</p>
         <a href="reservation.php" class="btn btn-primary">

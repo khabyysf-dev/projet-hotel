@@ -14,7 +14,7 @@
 
   <?php include("includes/header.php"); ?>
 
-  <!-- Hero -->
+ 
   <section class="hero" style="background-image: url('img/reisetopia-Vl5DAQxNBbM-unsplash.jpg')">
     <div class="hero-content reveal-on-scroll">
       <h1>Bienvenue à l'Hôtel Sables d'Or</h1>
@@ -25,7 +25,6 @@
     </div>
   </section>
 
-  <!-- Features -->
 
 
     <section id="features" class="pad-section">
@@ -70,7 +69,7 @@
       </div>
     </section>
 
-    <!-- Rooms -->
+  
     <section id="rooms" class="pad-section" style="background-color: #f1f5f9;">
       <div class="container">
         <div class="section-title reveal-on-scroll">
@@ -80,7 +79,7 @@
           </p>
         </div>
         <div class="rooms-grid">
-          <!-- Room 1 -->
+     
           <article class="room reveal-on-scroll">
             <img
               src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80"
@@ -98,7 +97,7 @@
             </div>
           </article>
 
-          <!-- Room 2 -->
+          
           <article class="room reveal-on-scroll reveal-delay-1">
             <img
               src="img/olexandr-ignatov-w72a24brINI-unsplash.jpg"
@@ -117,7 +116,7 @@
           </article>
 
 
-<!-- Room 3 -->
+
           <article class="room reveal-on-scroll reveal-delay-2">
             <img
               src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1000&q=80"
@@ -141,7 +140,7 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
+    
     <section class="pad-section" style="background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-primary) 100%); color: #fff; text-align: center; position: relative; overflow: hidden;">
       <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%); pointer-events: none;"></div>
       <div class="container reveal-on-scroll" style="position: relative; z-index: 1;">

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Hôtel Sables d'Or</title>
 
-    <!-- Font Awesome -->
+   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,7 +24,7 @@
   <body>
    <?php include("includes/header.php"); ?>
 
-    <!-- Hero -->
+    
     <section class="hero hero-page" style="background-image: url('img/contact\ us.jpg');">
       <div class="hero-content reveal-on-scroll">
         <h1>Contactez-nous</h1>
@@ -34,11 +34,10 @@
       </div>
     </section>
 
-    <!-- Contact Content -->
     <section class="pad-section">
       <div class="container">
         <div class="contact-grid">
-          <!-- Information Column -->
+       
           <div class="contact-info-card reveal-on-scroll">
             <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--brand-dark);">Nos Coordonnées</h2>
             <div style="width: 60px; height: 3px; background: var(--brand-accent); margin-bottom: 40px;"></div>
@@ -83,7 +82,7 @@
             </div>
           </div>
 
-          <!-- Form Column -->
+         
           <div class="contact-form-card reveal-on-scroll">
             <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--brand-dark);">Envoyez-nous un message</h2>
             <p class="muted" style="margin-bottom: 40px;">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>

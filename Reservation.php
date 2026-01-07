@@ -12,13 +12,13 @@ if (!isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Réservation - Hôtel Sables d'Or</title>
 
-    <!-- Font Awesome -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Premium Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,16 +42,16 @@ if (!isset($_SESSION['user'])) {
       </div>
     </div>
 
-    <!-- Wrap content in a form for validation handling in main.js -->
+    
     <form id="booking-form" class="booking-container fade-in" action="process_booking.php" method="POST">
       <input type="hidden" name="total_price" id="input-total-price">
       <input type="hidden" name="services_list" id="input-services-list">
       <input type="hidden" name="room_count" id="input-room-count" value="1">
       <input type="hidden" name="guests" id="input-guests" value="2">
       <input type="hidden" name="room_type" id="input-room-type">
-      <!-- Right Column: Details -->
+      
       <div class="details-column">
-        <!-- Step 1: Dates & Guests -->
+        
         <div class="section-card reveal-on-scroll">
           <div class="summary-header">
             <h3><i class="far fa-calendar-alt"></i> Détails de la réservation</h3>
@@ -93,7 +93,7 @@ if (!isset($_SESSION['user'])) {
           </div>
         </div>
 
-        <!-- Step 3: Services -->
+      
         <div class="section-card reveal-on-scroll reveal-delay-1">
           <div class="summary-header">
             <h3><i class="fas fa-concierge-bell"></i> Services supplémentaires</h3>
@@ -130,7 +130,7 @@ if (!isset($_SESSION['user'])) {
         </div>
       </div>
 
-      <!-- Left Column: Summary (Sticky) -->
+      
       <div class="summary-column summary-sticky">
         <div class="booking-summary reveal-on-scroll">
           <div class="summary-header">
@@ -153,7 +153,7 @@ if (!isset($_SESSION['user'])) {
               <span>Chambres :</span>
               <span id="sum-room-count">1 chambre</span>
             </div>
-             <div class="summary-row" style="display: none"> <!-- Hidden room selection name if needed, or keep logic -->
+             <div class="summary-row" style="display: none"> 
               <span>Type :</span>
               <span id="sum-room">--</span>
             </div>
@@ -188,7 +188,6 @@ if (!isset($_SESSION['user'])) {
 
     <?php include("includes/footer.php"); ?>
 
-    <!-- Script -->
     <script src="js/main.js"></script>
   </body>
 </html>

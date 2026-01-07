@@ -1,4 +1,4 @@
-<<<<<<< HEAD:vendor/composer/installed.json
+
 {
     "packages": [
         {
@@ -1324,7 +1324,6 @@
     "dev": true,
     "dev-package-names": []
 }
-=======
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
@@ -2608,5 +2607,4 @@
     "platform": {},
     "platform-dev": {},
     "plugin-api-version": "2.9.0"
-}
->>>>>>> 54e18ddfdb16a5723161724f54cbd8551308d84c:composer.lock
+    }

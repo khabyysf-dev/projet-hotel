@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $stmt->fetch();
 
         if ($user && password_verify($password, $user['password'])) {
-            // Login success
+           
             $_SESSION['user'] = [
                 'id' => $user['id'],
                 'name' => $user['name'],
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.php"); 
             exit();
         } else {
-            // Invalid credentials
+          
             header("Location: login.php?error=invalid_credentials");
             exit();
         }
