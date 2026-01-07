@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Réservations - Hôtel Sables d'Or</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container navbar">
+        <div class="logo"><a href="index.html">Hôtel Sables d'Or</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="rooms.html">Chambres</a>
+            <a href="restaurant.html">Restaurant</a>
+            <a href="booking.html">Réservation</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-auth">
+            <span id="user-name" style="margin-right: 15px; font-weight: 500;"></span>
+            <a href="#" class="nav-auth-login" id="logout-btn">Logout</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero hero-page" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600')">
+    <div class="hero-content">
+        <h1>Mes Réservations</h1>
+        <p>Gérez vos réservations</p>
+    </div>
+</section>
+
+<section class="pad-section">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Vos réservations apparaîtront ici.</p>
+            <a href="booking.html" class="btn btn-primary">Nouvelle réservation</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">Hôtel Sables d'Or</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Hôtel Sables d'Or. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/api-config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

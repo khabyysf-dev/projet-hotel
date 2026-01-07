@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation - Hôtel Sables d'Or</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="logo">
+        <a href="index.html">Hôtel Sables d'Or</a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="rooms.html">Chambres</a>
+        <a href="restaurant.html">Restaurant</a>
+        <a href="booking.html">Réservation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-auth">
+        <span id="user-name" style="margin-right: 15px; font-weight: 500; display: none;"></span>
+        <a href="my-reservations.html" class="nav-auth-login" style="margin-right: 10px; display: none;" id="reservations-link">Mes Réservations</a>
+        <a href="#" class="nav-auth-login" id="logout-btn" style="display: none;">Logout</a>
+        <a href="login.html" class="nav-auth-login" id="login-link">Log in</a>
+        <a href="register.html" class="nav-auth-register" id="register-link">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-page" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600')">
+    <div class="hero-content">
+      <h1>Réservez votre séjour</h1>
+      <p>Découvrez nos chambres luxueuses et réservez en quelques clics</p>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="pad-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Paramètres de réservation</h2>
+      <p style="text-align: center; margin-bottom: 50px; color: var(--text-muted);">Remplissez les détails pour réserver votre chambre</p>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="section-card">
+          <h3 style="margin-bottom: 25px;">Détails de la réservation</h3>
+          <div class="input-group">
+            <label>Date d'arrivée</label>
+            <input type="date" id="checkin" class="custom-input" required>
+          </div>
+          <div class="input-group">
+            <label>Date de départ</label>
+            <input type="date" id="checkout" class="custom-input" required>
+          </div>
+          <div class="input-group">
+            <label>Nombre de personnes</label>
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <button type="button" class="btn btn-sm btn-outline" onclick="updateGuests(-1)">-</button>
+              <span id="guest-display" style="font-size: 1.2rem; font-weight: 600; min-width: 30px; text-align: center;">2</span>
+              <button type="button" class="btn btn-sm btn-outline" onclick="updateGuests(1)">+</button>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Nombre de chambres</label>
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <button type="button" id="btn-room-dec" class="btn btn-sm btn-outline">-</button>
+              <span id="room-count-display" style="font-size: 1.2rem; font-weight: 600; min-width: 30px; text-align: center;">1</span>
+              <button type="button" id="btn-room-inc" class="btn btn-sm btn-outline">+</button>
+            </div>
+          </div>
+          <a href="index.html" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Retour</a>
+        </div>
+
+        <div class="section-card" style="margin-top: 30px; background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-primary) 100%); color: #fff; padding: 35px;">
+          <h3 style="color: var(--brand-accent); margin-bottom: 20px;">Résumé</h3>
+          <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+              <span>Arrivée:</span>
+              <span id="sum-checkin">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+              <span>Départ:</span>
+              <span id="sum-checkout">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+              <span>Personnes:</span>
+              <span id="sum-guests">2 personnes</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+              <span>Chambres:</span>
+              <span id="sum-room-count">1 chambre</span>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 600;">
+              <span>Total estimé:</span>
+              <span id="sum-total">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">Hôtel Sables d'Or</div>
+          <p class="muted">Votre destination de luxe pour un séjour inoubliable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="rooms.html">Chambres</a>
+            <a href="restaurant.html">Restaurant</a>
+            <a href="booking.html">Réservation</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Assistance</h4>
+          <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="#">Support</a>
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p class="muted">Email: info@hoteldsablesor.com</p>
+          <p class="muted">Téléphone: +213 XXX XXX XXX</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Hôtel Sables d'Or. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+  // Manage booking form state and calculations
+  let roomPrice = 25000;
+  let numGuests = 2;
+  let numRooms = 1;
+
+  function updateTotal() {
+    const total = roomPrice * numRooms;
+    document.getElementById('sum-total').textContent = total.toLocaleString() + ' DZD';
+  }
+
+  function updateGuests(change) {
+    numGuests += change;
+    if (numGuests < 1) numGuests = 1;
+    
+    const display = document.getElementById('guest-display');
+    const summary = document.getElementById('sum-guests');
+    
+    if (display) display.textContent = numGuests;
+    if (summary) summary.textContent = numGuests + ' personnes';
+  }
+
+  // Room decrease button
+  const btnRoomDec = document.getElementById('btn-room-dec');
+  if (btnRoomDec) {
+    btnRoomDec.addEventListener('click', () => {
+      numRooms = Math.max(1, numRooms - 1);
+      document.getElementById('room-count-display').textContent = numRooms;
+      document.getElementById('sum-room-count').textContent = numRooms + (numRooms > 1 ? ' chambres' : ' chambre');
+      updateTotal();
+    });
+  }
+
+  // Room increase button
+  const btnRoomInc = document.getElementById('btn-room-inc');
+  if (btnRoomInc) {
+    btnRoomInc.addEventListener('click', () => {
+      numRooms += 1;
+      document.getElementById('room-count-display').textContent = numRooms;
+      document.getElementById('sum-room-count').textContent = numRooms + (numRooms > 1 ? ' chambres' : ' chambre');
+      updateTotal();
+    });
+  }
+
+  // Update summary when dates change
+  const checkinInput = document.getElementById('checkin');
+  const checkoutInput = document.getElementById('checkout');
+  
+  if (checkinInput && checkoutInput) {
+    const syncDates = () => {
+      const checkinSummary = document.getElementById('sum-checkin');
+      const checkoutSummary = document.getElementById('sum-checkout');
+      
+      if (checkinSummary) checkinSummary.textContent = checkinInput.value || '-';
+      if (checkoutSummary) checkoutSummary.textContent = checkoutInput.value || '-';
+    };
+    
+    checkinInput.addEventListener('change', syncDates);
+    checkoutInput.addEventListener('change', syncDates);
+  }
+
+  // Initialize totals
+  updateTotal();
+  </script>
+</body>
+</html>
