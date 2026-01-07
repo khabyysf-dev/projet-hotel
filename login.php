@@ -1,6 +1,5 @@
 <?php
-require_once 'includes/google_setup.php';
-$authUrl = $client->createAuthUrl();
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -41,9 +40,10 @@ $authUrl = $client->createAuthUrl();
             <div class="social-divider">Ou continuer avec</div>
             
             <div class="btns">
-                <a href="<?php echo htmlspecialchars($authUrl); ?>" class="btn-social" style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: inherit;">
+                 <button type="button" class="btn-social" style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: inherit;">
                     <i class="fab fa-google btn-google"></i> Google
-                </a>
+</button>
+
                 <button type="button" class="btn-social">
                     <i class="fab fa-facebook-f btn-facebook"></i> Facebook
                 </button>

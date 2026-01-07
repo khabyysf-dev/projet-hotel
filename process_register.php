@@ -19,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
     $stmt->execute([$email]);
     if ($stmt->fetch()) {
-        die("Cet email est déjà utilisé.");
+        header("Location: login.php");
+        exit();
     }
 
   
@@ -31,7 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute([$name, $email, $hashed_password]);
 
        
-        header("Location: login.php?registered=1");
+        $user_id = $pdo->lastInsertId();
+        
+   
+        session_start();
+        $_SESSION['user_id'] = $user_id;
+        $_SESSION['user_name'] = $name;
+        
+        header("Location: index.php");
         exit();
     } catch (PDOException $e) {
         die("Erreur lors de l'inscription : " . $e->getMessage());
